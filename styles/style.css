@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap');
+
+:root {
+    --cor-principal: #f8a000;
+    --cor-secundaria: #881E3B;
+    --cor-terciaria: #D28A0A;
+    --cor-quartaria: #F6C771;
+    --cor-gradiente: linear-gradient(0deg, rgba(136, 30, 59, 1) 0%, rgba(210, 138, 10, 1) 64%);
+    --cor-gradiente1: linear-gradient(180deg, rgba(136, 30, 59, 1) 0%, rgba(0, 0, 0, 1) 64%);
+    --cor-gradiente2: linear-gradient(0deg, rgba(136, 30, 59, 1) 41%, rgba(0, 0, 0, 1) 82%);
+
+    --font-titulo: 'Shantell Sans', cursive;
+    --font-texto: 'Roboto Mono', monospace;
+}
+
+body {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+.cabecalho__navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--cor-secundaria);
+    transition: .5s;
+}
+
+.cabecalho__logo {
+    margin-left: 5rem;
+}
+
+.cacabecalho__menu {
+    display: flex;
+    padding: .5rem 6rem;
+    gap: 25px;
+
+}
+
+.cabecalho__lista {
+    margin: 0 30px;
+    width: 100%;
+
+}
+
+.cabecalho__link {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-family: var(--font-titulo);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--cor-secundaria);
+}
+
+.menuFixo {
+    background-color: var(--cor-terciaria);
+}
+
+.menuTexto .cabecalho__link {
+    color: var(--cor-secundaria)
+}
+
+.cardapio {
+    background: var(--cor-gradiente2);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .5rem;
+    background-color: var(--cor-principal);
+    text-align: center;
+}
+
+.apresentacao__titulo {
+    font-family: var(--font-titulo);
+    font-size: 35px;
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__texto {
+    font-family: var(--font-titulo);
+    font-size: 35px;
+    color: var(--cor-secundaria);
+
+}
+
+.carrocel {
+    width: 100%;
+}
+
+.swiper {
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
+.cardapio__titulo {
+    font-family: var(--font-titulo);
+    font-size: 35px;
+    color: var(--cor-terciaria);
+    text-align: center;
+    border-bottom: 2px solid var(--cor-principal);
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.cardapio__secao {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding: 2.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    width: 29%;
+    height: 90%;
+    padding: .8em;
+    background: var(--cor-quartaria);
+    border-radius: .5rem;
+    border: 1px solid var(--cor-terciaria);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card__img {
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    border-radius: .5rem;
+}
+
+.card__info {
+    padding-top: 10%;
+}
+
+/*Text*/
+.text__title {
+    color: var(--cor-secundaria);
+    font-family: var(--font-titulo);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.text__body {
+    color: var(--cor-terciaria);
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: var(--font-texto);
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid var(--cor-secundaria);
+    width: 100%;
+}
+
+.rodape {
+    background: var(--cor-gradiente1);
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape__secao {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+}
+
+.rodape__redes {
+    font-family: var(--font-titulo);
+    color: var(--cor-terciaria);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.rodape__localizacao {
+    font-family: var(--font-titulo);
+    color: var(--cor-terciaria);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.rodape__link {
+    font-family: var(--font-titulo);
+    color: var(--cor-terciaria);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.rodape__secao2 {
+    width: 50%;
+    text-align: center;
+}
+
+.rodape__titulo {
+    font-family: var(--font-texto);
+    margin: 2.5rem;
+}
+
+.rodape__texto {
+    font-family: var(--font-texto);
+    margin: 2.5rem;
+
+}
+
+@media (max-width: 834px) {
+
+    .cabecalho {
+        overflow: hidden;
+    }
+
+    .cabecalho__navegacao {
+        justify-content: center;
+    }
+
+    .cabecalho__logo {
+        display: none;
+    }
+
+    .cabecalho__menu {
+        padding: 2rem 3rem;
+        gap: 2px;
+    }
+
+    .cabecalho__lista {
+        margin: 20px;
+    }
+
+    .cabecalho__link {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .apresentacao {
+        padding: 1rem;
+    }
+
+
+    .apresentacao__titulo {
+        font-size: 20px;
+    }
+
+    .apresentacao__texto {
+        font-size: 15px;
+    }
+
+    .swiper {
+        margin-top: 5rem;
+        width: 100%;
+    }
+
+    .cardapio {
+        padding: 2rem 1rem;
+    }
+
+    .cardapio__secao {
+        padding: 1rem;
+        width: 100%;   
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .text__title {
+        font-size: 20px;
+    }
+
+    .text__body {
+        font-size: 15px;
+    }
+
+    .rodape {
+        padding: 1rem;
+    }
+
+    .rodape__secao {
+        flex-direction: column;
+    }
+    
+    .rodape__redes{
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    .rodape__localizacao {
+        font-size: 10px;
+        width: 100%;
+    }
+    
+    .rodape__link {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .rodape__secao2 {
+        width: 100%;
+    }
+
+    .rodape__titulo {
+        font-size: 15px;
+    }
+
+    .rodape__texto {
+        font-size: 10px;
+    }
+
+
+}
